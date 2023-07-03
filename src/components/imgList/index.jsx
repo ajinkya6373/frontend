@@ -5,6 +5,7 @@ import ImageListItem from "@mui/material/ImageListItem";
 import { PostModal } from "..";
 import { axiosInstance } from "../../utils/utils";
 import { useUserData } from "../../context";
+import { cloudinaryBaseUrl } from '../../utils/utils';
 
 export default function StandardImageList({ userId,isloggedInUser }) {
   const {userData:{userPosts}}= useUserData();
@@ -43,8 +44,8 @@ export default function StandardImageList({ userId,isloggedInUser }) {
             >
               <img
                 className="Image"
-                src={`${item.img.url}?w=164&h=164&fit=crop&auto=format`}
-                srcSet={`${item.img.url}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
+                src={`${cloudinaryBaseUrl}${item.img.public_id}?w=164&h=164&fit=crop&auto=format`}
+                srcSet={`${cloudinaryBaseUrl}${item.img.public_id}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
                 alt={item.desc}
                 loading="lazy"
                 onClick={handleOpen}
