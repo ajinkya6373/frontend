@@ -39,6 +39,7 @@ import { useUserAction } from '../../hooks';
 import PostModal from '../postModal';
 import { cloudinaryBaseUrl } from '../../utils/utils';
 
+
 export default function Post({ post }) {
     const {
         userProfile,
