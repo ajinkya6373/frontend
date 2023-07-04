@@ -31,10 +31,10 @@ margin-left: 5px;
 
 export const RightBottom= styled.div`
 margin-top: 7px;
-opacity: 0.5;
 display:flex;
 font-size: 14px;
 cursor:pointer;
+color: var(--secondary-text);
 `
 export const Reply= styled.text``
 export const Option = styled.div`

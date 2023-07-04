@@ -1,12 +1,8 @@
 
 import styled from "styled-components/macro";
 export const Profile = styled.div`
-    // display:flex;
     position:relative;
-    // display: flex;
-    
-    // border:2px solid red;
-`
+    `
 export const ProfileRight = styled.div`
     flex: 9;
 `
@@ -16,6 +12,7 @@ export const ProfileRightTop = styled.div`
 export const ProfileCover = styled.div`
     height: 320px;
     position: relative;
+
 `
 export const CoverImage = styled.img`
     width: 100%;
@@ -101,6 +98,13 @@ export const SetCoverpic = styled.label`
     right:8px;
     z-index: 1;
     top: 7px;
+    svg{
+        background-color: var(--secondary-bg);
+        border-radius: 50%;
+        font-size: 30px;
+        padding: 5px;
+    
+        }
 `
 export const StyledToastMessage = styled.div`
   background-color: #ffffff;

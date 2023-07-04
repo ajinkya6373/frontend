@@ -4,15 +4,8 @@ import {
     InfoItem,
     InfoKey,
     InfoValue,
-    // Followings,
-    // Following,
-    // Image,
-    // Name,
     LogOutButton,
-    Text,
-    Icon,
     Wrapper,
-    // FollowButton
 
 } from './style/profileRightbar'
 import { useState, useEffect } from "react"
@@ -47,8 +40,8 @@ export default function ProfileRightbar({ user }) {
             {
                 userProfile._id === user._id ? (
                     <LogOutButton onClick={() => logUserOut()}>
-                        <Icon><ExitToAppIcon /></Icon>
-                        <Text >log out</Text>
+                        <ExitToAppIcon />
+                        log out
                     </LogOutButton>
                 )
                     : (

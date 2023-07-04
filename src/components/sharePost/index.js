@@ -1,7 +1,6 @@
 
 import {
     ShareContainer,
-    Wrapper,
     ShareTop,
     Image,
     Input,
@@ -85,7 +84,6 @@ export default function SharePost() {
     }
     return (
         <ShareContainer>
-            <Wrapper>
                 <ShareTop>
                     <Image src={userProfile.profilePicture} />
                     <Input placeholder={`${userProfile.username} Add caption`} 
@@ -104,7 +102,7 @@ export default function SharePost() {
                 <ShareBottom onSubmit={sumbitHandler}>
                     <ShareOptions>
                         <ShareOption htmlFor="file">
-                            <Icon color="tomato"><PermMediaIcon /></Icon>
+                            <Icon ><PermMediaIcon /></Icon>
                             <Text>Photo </Text>
                         </ShareOption>
                         <input
@@ -117,7 +115,6 @@ export default function SharePost() {
                     </ShareOptions>
                     <ShareButton type="submit" disabled={Invalid}>Share</ShareButton>
                 </ShareBottom>
-            </Wrapper>
         </ShareContainer>
     )
 }

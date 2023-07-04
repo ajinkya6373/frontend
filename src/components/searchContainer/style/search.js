@@ -7,7 +7,7 @@ export const Container = styled.div`
   cursor: pointer;
   margin-top: 3px;
   &:hover {
-    background-color: rgb(245, 243, 243);
+    opacity:0.8;
   }
 `;
 
@@ -25,6 +25,7 @@ export const Img = styled.img`
 export const Text = styled.span`
   font-weight: 500;
   flex-grow: 1;
+  color: var(--primary-text);
   @media (max-width: 390px) {
     font-size: 11px;
   }

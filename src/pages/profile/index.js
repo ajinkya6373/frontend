@@ -170,14 +170,7 @@ export default function ProfilePage() {
         </ModalCustom>
         {isloggedInUser && (
           <SetCoverpic onClick={handleOpen}>
-            <EditIcon
-              style={{
-                backgroundColor: "white",
-                borderRadius: "50%",
-                fontSize: "27px",
-                padding: "3px",
-              }}
-            />
+            <EditIcon/>
           </SetCoverpic>
         )}
         <div>

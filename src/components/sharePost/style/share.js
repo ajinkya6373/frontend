@@ -4,11 +4,13 @@ export const ShareContainer = styled.div`
     border-radius: 10px;
     -webkit-box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
     box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
-`
-export const  Wrapper = styled.div`
-padding: 10px;
+    background: var(--secondary-bg);
+    border-radius: var(--border-radius);
+    margin-top: 1px;
+    padding: 10px;
 
 `
+
 export const  ShareTop = styled.div`
 display: flex;
 align-items: center;
@@ -25,7 +27,8 @@ margin-right: 10px;
 export const  Input = styled.input`
 border: none;
 width: 80%;
-
+background: var(--secondary-bg);
+color: var(--primary-text);
 &:focus{
     outline: none;
 }
@@ -70,7 +73,9 @@ export const ShareOption = styled.label`
 export const Icon = styled.span`
     font-size: 18px;
     margin-right: 3px;
-    color:${({ color }) => color};
+    svg{
+      color: var(--icon-secondary);
+    }
 `
 export const Text= styled.span`
     font-size: 14px;
@@ -87,7 +92,7 @@ export const ShareButton = styled.button`
     border: none;
     padding: 7px;
     border-radius: 5px;
-    background-color: green;
+    background-color: var(--icon-tertiary);
     font-weight: 500;
     margin-right: 20px;
     cursor: pointer;

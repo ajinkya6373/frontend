@@ -116,11 +116,11 @@ export default function Post({ post }) {
                         <DropDown>
                             <Container >
                                 <OptionList onClick={() => setEdit(!edit)}>
-                                    < EditIcon htmlColor="blue" style={{ marginRight: "3px" }} />
+                                    < EditIcon   />
                                     <Text>Edit</Text>
                                 </OptionList>
                                 <OptionList onClick={deletePosthandler}>
-                                    <DeleteIcon htmlColor="red" />
+                                    <DeleteIcon />
                                     <Text >delete</Text>
                                 </OptionList>
                             </Container>
@@ -146,13 +146,11 @@ export default function Post({ post }) {
                 <PostBottom>
                     <PostBottomLeft>
                         {isliked ? <FavoriteIcon
-                            sx={{ color: "red", cursor: "pointer" }}
                             onClick={() => likeHandler()} />
                             : <FavoriteBorderIcon
-                                sx={{ cursor: "pointer" }}
                                 onClick={() => likeHandler()} />}
                         <PostLikeCounter>{likes} people like it</PostLikeCounter>
-                        <ModeCommentOutlinedIcon onClick={() => setOpen(true)} sx={{ cursor: "pointer" }}/>
+                        <ModeCommentOutlinedIcon onClick={() => setOpen(true)} />
                     </PostBottomLeft>
                     <PostBottomRight>
                         {isBookMarked

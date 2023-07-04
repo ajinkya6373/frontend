@@ -7,8 +7,8 @@ const StyledFollowButton = styled.button`
   margin-top: 30px;
   margin-bottom: 10px;
   border: none;
-  background-color: #1872f2;
-  color: white;
+  background: var(--main-secondary);
+  color: var(--primary-text);
   border-radius: 5px;
   padding: 5px 10px;
   display: flex;
@@ -18,7 +18,7 @@ const StyledFollowButton = styled.button`
   cursor: pointer;
   transition: background-color 0.3s ease;
   &:hover {
-    background-color: #146ac6;
+    background: var(--main-primary); 
     outline: none;
   }
 
@@ -26,8 +26,8 @@ const StyledFollowButton = styled.button`
     if (suggestionsbox) {
     return  `
       margin:0;
-      background-color: #2a384b;      
-      `
+      background: var(--main-secondary);     
+       `
     }
   }}
 

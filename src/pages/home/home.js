@@ -17,6 +17,9 @@ position: sticky;
 top: 53px; 
 z-index: 1; 
 padding: 1rem;
+background: var(--secondary-bg);
+border-radius: var(--border-radius);
+margin: 1rem 1.1rem;
 
 `
 export const Feed = styled.div`
@@ -45,20 +48,23 @@ export const SortingBox = styled.div`
 export const SelectContainer = styled.div`
   position: absolute;
   right: 0px;
-  background: #ffffff;
+  background: var(--secondary-bg);
+  border-radius: var(--border-radius);
   box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
   z-index: 99;
   padding: 1rem;
 
   > div {
     display: flex;
-    align-items: center;
-    gap: 0.5rem;
+    gap: 0.4rem;
     cursor: pointer;
 
     &.selected {
-      color: blue;
-      
+      color: #1973b1;
+      svg{
+        color: #1973b1;
+
+      }
     }
   }
 `;

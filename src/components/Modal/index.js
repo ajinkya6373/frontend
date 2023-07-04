@@ -7,7 +7,7 @@ export default function ModalCustom({ children, profileModel, ...restProps }) {
         top: '50%',
         left: '50%',
         transform: 'translate(-50%, -50%)',
-        bgcolor: 'background.paper',
+        background: `var(--primary-bg)`,
         border: '2px solid #000',
         boxShadow: 24,
         p: 2,

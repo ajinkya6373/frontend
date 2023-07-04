@@ -3,7 +3,7 @@ import styled from "styled-components/macro"
 export const TopbarContainer = styled.div`
     height: 50px;
     width: 100%;
-    background-color: #2a384b;
+    background-color: var(--secondary-bg);
     display: flex;
     align-items: center;
     position: sticky;
@@ -45,11 +45,16 @@ export const SearchBar = styled.div`
     align-items: center;
     justify-content: space-around;
     
+    svg{
+        color: var(--icon-secondary);
+
+    }
+    
 `
 export const ResultBox =styled.div`
     position: absolute;
     width: 100%;
-    background-color: white;
+    background-color: var(--secondary-bg);
     overflow: scroll;
     max-height: 200px;
     border-radius: 5px;
@@ -68,12 +73,7 @@ export const CancelIcon= styled.span`
       opacity:0.5;
       display:${props => props.showresult ? "block" :"none"};
 `
-export const SearchIcon = styled.div`
-    font-size: 20px !important;
-    margin-left: 10px;
-    margin-top:7px;
-    display :inline-block;
-`
+
 
 export const Input = styled.input`
     border: none;

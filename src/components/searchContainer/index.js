@@ -32,7 +32,7 @@ export default function SearchContainer({ searchData, suggestionsBox }) {
         <FollowButton
         onClickHandler={(event) => followHandler(event)}          
         isFollowing={isFollowing}
-          suggestionsBox={suggestionsBox}
+        suggestionsBox={suggestionsBox}
         />
       )}
     </Container>

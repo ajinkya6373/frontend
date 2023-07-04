@@ -8,7 +8,7 @@ export const Image = styled.img`
   flex: 5;
   max-width: 65%;  
   height: 394px;
-  background-color: black;
+  background-color: var(--secondary-bg);
   object-fit: contain;
 
   @media (max-width: 768px) {
@@ -21,13 +21,15 @@ export const Desc = styled.div`
   flex-direction: column;
   justify-content:space-between;
   margin-left: 12px;
-  width: 100%;
+  min-width: 224px;
+
 
 `;
 
 export const SubText = styled.div`
   font-size: 12px;
   font-weight: 450;
+  color: var(--secondary-text);
 `;
 
 export const Text = styled.div`
@@ -99,8 +101,7 @@ export const CommentInput = styled.input`
 export const PostButton = styled.button`
   border: none;
   background:none;
-  color: blue;
-  border-radius: 4px;
+  color: var(--primary-text);
   cursor: pointer;
 `;
 
