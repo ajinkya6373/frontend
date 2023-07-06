@@ -9,28 +9,23 @@ import {
     TopbarRight,
     Image,
     ResultBox,
-
+    MaterialUISwitch,
 } from "./style/topbar"
 import SearchIcon from '@mui/icons-material/Search';
 import { Link } from "react-router-dom"
 import { useState } from "react";
 import axios from "axios"
-import { useUserAuth } from "../../context";
+import { useTheme, useUserAuth } from "../../context";
 import { axiosInstance } from "../../utils/utils";
 import SearchContainer from "../searchContainer";
-
 const CancelToken = axios.CancelToken;
 let source = CancelToken.source();
 export default function Topbar() {
     const [searchInput, setSearchInput] = useState('')
     const [searchResult, setSearchResult] = useState(null);
     const [showResult, setShowResult] = useState(false);
-
-    const {
-        userProfile,
-    } = useUserAuth();
-
-
+    const {userProfile} = useUserAuth();
+    const {isDarkMode, toggleTheme}  = useTheme()
     const search = async (e) => {
         setSearchInput(e)
         source && source.cancel('Operation canceled due to new request.');
@@ -49,10 +44,11 @@ export default function Topbar() {
             console.log(err)
         }
     }
+    const toggleHandle =()=>toggleTheme();
     return (
         <TopbarContainer>
             <TopbarLeft>
-                <Link to="/" style={{ textDecoration: "none" }} >
+                <Link to="/"  >
                     <Logo>ShareSpace</Logo>
                 </Link>
             </TopbarLeft>
@@ -73,8 +69,7 @@ export default function Topbar() {
                     {
                         searchResult
                             ? searchResult?.map((s) => (
-                                <Link key={s._id} to={`/profile/${s._id}`}
-                                    style={{ listStyle: "none", textDecoration: "none", color: "black", display: "contents" }}>
+                                <Link key={s._id} to={`/profile/${s._id}`}>
                                     <SearchContainer searchData={s} />
                                 </Link>
                             ))
@@ -83,6 +78,7 @@ export default function Topbar() {
                 </ResultBox>}
             </TopbarCenter>
             <TopbarRight>
+                <MaterialUISwitch onChange={toggleHandle} checked={isDarkMode}/>
                 <Link to={`/profile/${userProfile._id}`}>
                     <Image src={userProfile.profilePicture} />
                 </Link>

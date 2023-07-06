@@ -5,8 +5,6 @@ ${(props) => props.rootStyles}
   *, *:before, *:after {
     box-sizing: border-box;
   }
-
-
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -31,5 +29,11 @@ svg{
 ::-webkit-scrollbar {
   width: 0px;
 }
+a{
+  text-decoration:none;
+}
 
+button{
+  cursor:pointer;
+}
 `;

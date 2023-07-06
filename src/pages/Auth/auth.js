@@ -13,7 +13,7 @@ border:1px solid white;
 padding: 2rem;
 display:flex;
 flex-direction:column;
-background:white;
+background: var(--secondary-bg);
 border-radius: 8px;
 width: 20rem;
 
@@ -72,8 +72,9 @@ export const Button = styled.button`
         return css `
         background-color: unset;
         color:black;
-        border:1px solid black;
+        border: 1px solid var(--primary-bg);
         margin-top: unset;
+        color: var(--primary-text);
         &:hover {
             background-color: unset;
             opacity:0.6;
@@ -98,7 +99,7 @@ color:red;
 export const PasswordWrapper = styled.div`
 position: relative;
 input{
-    width:94%;
+    width:100%;
 }
 svg{
     position: absolute;
@@ -106,5 +107,6 @@ svg{
     right: 10px;
     transform: translateY(-50%);
     cursor: pointer;
+    color: var(--secondary-text);
 }
 `
