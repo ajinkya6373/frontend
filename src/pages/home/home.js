@@ -4,13 +4,22 @@ export const PageWrapper = styled.div`
   margin: 0 auto;
   display: flex;
   max-width: 80%;
+  @media (max-width: 767px) {
+    max-width: unset;
+    padding: 0 1rem;
+  }
 `;
 export const LeftbarWrraper =styled.div`
 flex: 1;
-
+@media (max-width: 767px) {
+  display:none;
+}
 `
 export const RightBar = styled.div`
   flex: 1;
+  @media (max-width: 767px) {
+    display:none;
+  }
 `;
 export const SuggestionsBox = styled.div`
 position: sticky;
@@ -25,7 +34,6 @@ margin: 1rem 1.1rem;
 export const Feed = styled.div`
   flex: 2;
 `;
-
 
 export const SortingBox = styled.div`
   text-align: center;
@@ -68,3 +76,9 @@ export const SelectContainer = styled.div`
     }
   }
 `;
+
+export const NoPostImage = styled.img`
+width: 100%;
+margin-top: 1rem;
+
+`

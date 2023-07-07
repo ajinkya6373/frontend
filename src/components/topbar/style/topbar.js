@@ -52,145 +52,97 @@ export const MaterialUISwitch = mStyled(Switch)(({ theme }) => ({
 
 
 export const TopbarContainer = styled.div`
-    height: 50px;
-    width: 100%;
-    background-color: var(--secondary-bg);
-    display: flex;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 999;
-`
+  height: 50px;
+  width: 100%;
+  background-color: var(--secondary-bg);
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+
+`;
+
 export const TopbarLeft = styled.div`
-    flex:2;
-    @media (max-width:480px) {
-        flex:1;
-      }
-`
+  flex: 2;
+  @media (max-width: 480px) {
+    flex: 1;
+  }
+`;
+
 export const Logo = styled.span`
-    font-size: 24px;
-    margin-left: 20px;
-    font-weight: bold;
-    color: var(--primary-text);
-    cursor: pointer;
-    @media (max-width:580px) {
-        margin-left: 6px;
-        font-size: 20px;
-      }
+  font-size: 24px;
+  margin-left: 20px;
+  font-weight: bold;
+  color: var(--primary-text);
+  cursor: pointer;
+  @media (max-width: 768px) {
+    margin-left: 6px;
+    font-size: 20px;
+    margin-right: 0.5rem;
+  }
+`;
 
-`
 export const TopbarCenter = styled.div`
-    flex: 5;
-    position:relative;
-    
-`
-export const SearchBar = styled.div`
-    width: 100%;
-    height: 30px;
-    background-color: white;
-    border: 1px solid #33333333;
-    border-radius: var(--border-radius);
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    svg{
-        color: var(--icon-secondary);
-    }
-    
-`
-export const ResultBox =styled.div`
-    position: absolute;
-    width: 100%;
-    background-color: var(--secondary-bg);
-    overflow: scroll;
-    max-height: 200px;
-    border-radius: 5px;
-    margin-top: 4px;
-    box-shadow: 0px 0px 16px -8px rgb(0 0 0 / 68%);
-    display:${props => props.showresult ? "block" :"none"};
-    @media (max-width:580px) {
-        height: 100px;
-      }
-`
-export const CancelIcon= styled.span`
-      position: absolute;
-      z-index:1;
-      top:32px;
-      right:0;
-      opacity:0.5;
-      display:${props => props.showresult ? "block" :"none"};
-`
+  flex: 5;
+  position: relative;
+`;
 
+export const SearchBar = styled.div`
+  width: 100%;
+  height: 30px;
+  background-color: white;
+  border: 1px solid #33333333;
+  border-radius: var(--border-radius);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  svg {
+    color: var(--icon-secondary);
+  }
+`;
+
+export const ResultBox = styled.div`
+  position: absolute;
+  width: 100%;
+  background-color: var(--secondary-bg);
+  overflow: scroll;
+  max-height: 200px;
+  border-radius: 5px;
+  margin-top: 4px;
+  box-shadow: 0px 0px 16px -8px rgb(0 0 0 / 68%);
+  display: ${props => (props.showresult ? "block" : "none")};
+  @media (max-width: 580px) {
+    height: 100px;
+  }
+`;
 
 export const Input = styled.input`
-    border: none;
-    width: 70%;
-
-    &:focus{
-        outline: none;
-    }
-`
+  border: none;
+  width: 70%;
+  &:focus {
+    outline: none;
+  }
+`;
 
 export const TopbarRight = styled.div`
-    flex: 2;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    color: white;
-    @media (max-width:580px) {
-        justify-content: right;
-        margin: 0px 6px;
-      }
-`
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: white;
+  @media (max-width: 768px) {
+    flex: 1;
+    }
+`;
 
-export const TopbarLinks = styled.div`
-@media (max-width:580px) {
-    display:none;
-  }
-`
-
-export const Topbarlink = styled.span`
-margin-right: 10px;
-font-size: 14px;
-cursor: pointer;
-
-`
-
-export const TobarIcons = styled.div`
-display: flex;
-
-`
-
-export const TobarIconItem = styled.div`
-    margin-right: 15px;
-    cursor: pointer;
-    position: relative;
-    @media (max-width:580px) {
-        margin-right: 6px;
-      }
-`
-
-export const TobarIconBadge = styled.span`
-    width: 15px;
-    height: 15px;
-    background-color: red;
-    border-radius: 50%;
-    color: white;
-    position: absolute;
-    top: -5px;
-    right: -5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
-
-` 
-
-export const Image = styled.img`
+export const Profile = styled.img`
 width: 32px;
 height: 32px;
 border-radius: 50%;
 object-fit: cover;
 cursor: pointer;
-
+@media (max-width: 768px) {
+display:none;
+}
 `

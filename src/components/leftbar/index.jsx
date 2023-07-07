@@ -33,32 +33,32 @@ export default function Leftbar() {
         className={selectedItem === "/" ? "selected" : ""}
       >
         <HomeIcon />
-        Home
+      <span> Home</span>  
       </LeftbarLink>
       <LeftbarLink
         onClick={() => handleLinkClick("/explore")}
         className={selectedItem === "/explore" ? "selected" : ""}
       >
         <ExploreIcon />
-        Explore
+       <span> Explore </span> 
       </LeftbarLink>
       <LeftbarLink
         onClick={() => handleLinkClick("/bookmark")}
         className={selectedItem === "/bookmark" ? "selected" : ""}
       >
         <BookmarkIcon />
-        Bookmark
+       <span>Bookmark</span> 
       </LeftbarLink>
       <LeftbarLink
         onClick={() => handleLinkClick(`/profile/${userProfile._id}`)}
         className={selectedItem === `/profile/${userProfile._id}` ? "selected" : ""}
       >
         <PersonIcon />
-        Profile
+       <span>Profile</span> 
       </LeftbarLink>
       <LeftbarLink onClick={logUserOut}>
         <LogoutIcon />
-        Log Out
+       <span>Log Out</span> 
       </LeftbarLink>
     </LeftbarWrapper>
   );

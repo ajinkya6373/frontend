@@ -1,6 +1,5 @@
 import { Routes, Route } from "react-router-dom";
 import {
-  HomePagee,
   SignInPage,
   SignUpPage,
   HomePage,
@@ -29,7 +28,6 @@ function App() {
           <PrivateRoute>
             < HomePage />
           </PrivateRoute>} />
-        <Route path="/e" element={<HomePagee />} />
         <Route path="/signup" element={
           <SignUpPage />
         } />

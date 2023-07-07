@@ -1,4 +1,3 @@
-
 import {
     TopbarContainer,
     TopbarLeft,
@@ -7,9 +6,9 @@ import {
     Input,
     SearchBar,
     TopbarRight,
-    Image,
     ResultBox,
     MaterialUISwitch,
+    Profile,
 } from "./style/topbar"
 import SearchIcon from '@mui/icons-material/Search';
 import { Link } from "react-router-dom"
@@ -80,7 +79,7 @@ export default function Topbar() {
             <TopbarRight>
                 <MaterialUISwitch onChange={toggleHandle} checked={isDarkMode}/>
                 <Link to={`/profile/${userProfile._id}`}>
-                    <Image src={userProfile.profilePicture} />
+                    <Profile src={userProfile.profilePicture} />
                 </Link>
             </TopbarRight>
         </TopbarContainer>

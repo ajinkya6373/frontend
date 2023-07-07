@@ -9,6 +9,7 @@ export const PostContainer = styled.div`
     position:relative;
     background: var(--secondary-bg);
     border-radius: var(--border-radius);
+    margin-bottom:${({islastPost})=>islastPost ?"5rem" : "0rem"}
 `
 export const Wrapper = styled.div`
     padding: 10px;

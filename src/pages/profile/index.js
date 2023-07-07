@@ -21,14 +21,16 @@ import {
   ModalCustom,
   SharePost,
   StandardImageList,
-  ProfileRightbar,
   UpdateProfile,
+  BottomNavigation,
+  UserInfoCard,
 } from "../../components";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import SettingsIcon from "@material-ui/icons/Settings";
 import PhotoCameraTwoToneIcon from "@material-ui/icons/PhotoCameraTwoTone";
 import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
+import LaunchIcon from '@mui/icons-material/Launch';
 import EditIcon from "@material-ui/icons/Edit";
 import { Button } from "@material-ui/core";
 import { Input } from "@mui/material";
@@ -152,6 +154,9 @@ export default function ProfilePage() {
 
     fetchUserData();
   }, [userId, userProfile]);
+  const handleLaunchIconClick = () => {
+    window.open(user.desc, '_blank');
+  };
   const isloggedInUser = userProfile._id === user?._id;
   return (
     <>
@@ -242,29 +247,32 @@ export default function ProfilePage() {
                   <ProfileName>{user.username}</ProfileName>
                   <Description>
                     {user.bio 
-                    ? user.bio 
+                    ? <>{user.bio}  </>
                     :isloggedInUser
                     ? "Please add your Bio" 
                     : "No Bio"
                     }
-                    
+                    <LaunchIcon onClick={handleLaunchIconClick} />
                   </Description>
                 </>
               )}
             </ProfileInfo>
           </ProfileRightTop>
           <ProfileRightBottom>
-            <div style={{ width: "88%" }}>
+            <div 
+            style={{ width: "88%" }}
+            >
               {isloggedInUser && <SharePost />}
               <StandardImageList
                 userId={user?._id}
                 isloggedInUser={isloggedInUser}
               />
             </div>
-            <ProfileRightbar user={user} />
+            <UserInfoCard user={user} />
           </ProfileRightBottom>
         </ProfileRight>
       </Profile>
+      <BottomNavigation/>
     </>
   );
 }

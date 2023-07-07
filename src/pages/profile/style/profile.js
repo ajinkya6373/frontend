@@ -78,6 +78,14 @@ export const ProfileName = styled.h4`
 `
 export const Description = styled.span`
     font-weight: 300;
+    align-items: end;
+    justify-content: center;
+    display: flex;
+    gap: 0.5rem;
+    svg{
+        font-size:1rem;
+        color: var(--icon-primary);
+    }
 `
 export const ProfileRightBottom = styled.div`
     display: flex;  
@@ -85,7 +93,14 @@ export const ProfileRightBottom = styled.div`
     max-width: 60%;
     justify-content: center;
     gap:2rem;
+    margin-bottom: 4rem;
+    @media (max-width: 767px) {
+        flex-wrap: wrap-reverse;
+        margin-bottom: 4rem;
+        max-width: unset;
+        gap:0;
 
+    }
 `
 export const Setting = styled.div`
     position:absolute;

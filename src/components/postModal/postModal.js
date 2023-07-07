@@ -2,6 +2,10 @@ import styled from "styled-components/macro";
 
 export const Wrapper = styled.div`
   display: flex;
+  @media (max-width: 767px) {
+    flex-wrap:wrap;
+    justify-content: center;
+  }
 `;
 
 export const Image = styled.img`
@@ -10,9 +14,11 @@ export const Image = styled.img`
   height: 394px;
   background-color: var(--secondary-bg);
   object-fit: contain;
-
   @media (max-width: 768px) {
     max-width: 12rem;
+    max-width: 100%;  
+    height: unset;
+
   }
 `;
 
@@ -114,6 +120,11 @@ export const CommentBoxContainer = styled.div`
     width: 0;
     background-color: transparent;
   }
+  @media (max-width: 768px) {
+    max-height: 150px;
+
+  }
+  
 `;
 export const CommentBox = styled.div`
   /* styles for the comment box */

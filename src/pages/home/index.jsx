@@ -1,16 +1,17 @@
 import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import {
+  BottomNavigation,
   Leftbar,
   Post,
   SearchContainer,
   SharePost,
   Topbar,
 } from "../../components";
-import { useUserAuth, useUserData } from "../../context";
 import {
   Feed,
   LeftbarWrraper,
+  NoPostImage,
   PageWrapper,
   RightBar,
   SelectContainer,
@@ -22,20 +23,19 @@ import TrendingUpIcon from "@mui/icons-material/TrendingUp";
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import { axiosInstance } from "../../utils/utils";
+import { useUserAuth, useUserData } from "../../context";
 
 export default function HomePage() {
   const [showOption, setShowOption] = useState(false);
   const [sortOption, setSortOption] = useState("trending");
   const [explorePosts, setExplorePosts] = useState([]);
-  const [suggestion,setSuggestion] = useState([]);
+  const [suggestion, setSuggestion] = useState([]);
   const optionsContainerRef = useRef(null);
   const iconRef = useRef(null);
   const {
     userData: { timeLine, bookMark },
   } = useUserData();
-  const {
-    userProfile,
-} = useUserAuth();
+  const { userProfile } = useUserAuth();
   const location = useLocation();
   useEffect(() => {
     const fetchAllPosts = async () => {
@@ -45,13 +45,15 @@ export default function HomePage() {
     fetchAllPosts();
   }, []);
 
-  useEffect(()=>{
-    const fetchSuggestion = async()=>{
-      const {data} = await axiosInstance.get(`/users/suggestions/${userProfile._id}`)
-      setSuggestion(data) 
-    }
+  useEffect(() => {
+    const fetchSuggestion = async () => {
+      const { data } = await axiosInstance.get(
+        `/users/suggestions/${userProfile._id}`
+      );
+      setSuggestion(data);
+    };
     fetchSuggestion();
-  },[])
+  }, []);
   const sortPosts = (posts) => {
     let sortedPosts = [...posts];
     switch (sortOption) {
@@ -111,7 +113,7 @@ export default function HomePage() {
       <Topbar />
       <PageWrapper>
         <LeftbarWrraper>
-        <Leftbar />
+          <Leftbar />
         </LeftbarWrraper>
         <Feed>
           <SharePost />
@@ -146,23 +148,34 @@ export default function HomePage() {
               </SelectContainer>
             )}
           </SortingBox>
-          {sortedPosts.length>0 ? sortedPosts.map((post) => (
-            <Post key={post._id} post={post} />
-          )):
-            <img src="/assets/noPosts.jpg" alt="no posts" />
-          }
+          {sortedPosts.length > 0 ? (
+            sortedPosts.map((post, index) => (
+              <Post
+                key={post._id}
+                post={post}
+                islastPost={sortedPosts.length - 1 === index}
+              />
+            ))
+          ) : (
+            <NoPostImage src="/assets/noPosts.jpg" alt="no posts" />
+          )}
         </Feed>
         <RightBar>
           <SuggestionsBox>
             <span>Suggested Users</span>
             <div>
-              {
-                suggestion.map(i=>  <SearchContainer key={i._id} searchData={i} suggestionsBox={"true"}/> )
-              }
+              {suggestion.map((i) => (
+                <SearchContainer
+                  key={i._id}
+                  searchData={i}
+                  suggestionsBox={"true"}
+                />
+              ))}
             </div>
           </SuggestionsBox>
         </RightBar>
       </PageWrapper>
+      <BottomNavigation/>
     </div>
   );
 }

@@ -1,6 +1,32 @@
 import styled from "styled-components/macro";
 export const Wrapper = styled.div`
 min-width:150px;
+@media (max-width: 767px) {
+    display:none;
+}
+
+`
+export const MobileScreenWrapper = styled.div`
+display:none;
+@media (max-width: 767px) {
+    display:block;
+    width: 88%;
+    position: relative;
+    padding: 1rem 0;
+    > button{
+        float:right;
+    }
+    span{
+        margin-left: 8px;
+        margin-bootom:0.5rem;
+        a{
+            color: var(--primary-text);
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}
 `
 export const Title = styled.h4`
     font-size: 18px;
