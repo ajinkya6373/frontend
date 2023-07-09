@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useAuth } from "../../hooks";
-import { useUserAuth } from "../../context";
 import {
   AuthForm,
   AuthInput,
@@ -22,7 +21,6 @@ export default function SignInPage() {
   });
   const navigate = useNavigate();
   const { logInUser } = useAuth();
-  const { setLoading } = useUserAuth();
   const { email, password } = formData;
   const isDisabled = email === "" || password === "";
 
@@ -38,21 +36,16 @@ export default function SignInPage() {
   const signInHandler = async (e) => {
     e.preventDefault();
     setSignInError("");
-    setLoading(true);
     try {
-      const {
-        data: { success, message },
-      } = await logInUser(formData);
+      const {success,message} = await logInUser(formData);
       if (!success) {
         setSignInError(message);
       }
     } catch (error) {
       setSignInError(error);
-    } finally {
-      setLoading(false);
+      console.log(signInError);
     }
   };
-
   return (
     <AuthWrapper>
       <AuthForm onSubmit={signInHandler}>

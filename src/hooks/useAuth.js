@@ -31,9 +31,8 @@ export const useAuth = () => {
       }
       
     } catch (error) {
-      console.log(error);
-      toast.error(`${error.message}`);
-      return { success: false, message: error.message };
+      toast.error(`${error.response.data.message}`);
+      return  error.response.data;;
     } finally {
       setLoading(false);
     }
@@ -48,19 +47,19 @@ export const useAuth = () => {
       });
   
       const { success, message, user } = response.data;
-  
       if (success) {
         setIsUserLoggedIn(true);
         setUserProfile(user);
         toast.success(message);
         const path = redirectPath || "/";
         navigate(path);
-      } else {
-        throw new Error(message);
+      }
+      if (!success) {
+        return { success, message }
       }
     } catch (error) {
-      toast.error(error.message);
-      return { success: false, message: error.message };
+      toast.error(`${error.response.data.message}`);
+      return error.response.data;
     } finally {
       setLoading(false);
     }

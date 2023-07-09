@@ -49,7 +49,7 @@ export default function SignUpPage() {
     e.preventDefault();
     setSignUpError("");
     setLoading(true);
-  
+
     if (!isPasswordValid) {
       setSignUpError("Please enter a valid password!");
       setLoading(false);
@@ -63,21 +63,13 @@ export default function SignUpPage() {
     }
   
     try {
-      const {
-        data: { success, message },
-      } = await signUpUser(formData);
-  
+      const  { success, message } = await signUpUser(formData);
       if (!success) {
-        if (message === "Username or email already exists.") {
-          setSignUpError(message);
-        } else {
-          console.log(message);
-          setSignUpError("Failed to create an account.");
-        }
+        setSignUpError(message);
       }
     } catch (error) {
-      setSignUpError("Failed to create an account.");
-    } finally {
+      console.log(error);
+    }finally{
       setLoading(false);
     }
   };
