@@ -99,8 +99,8 @@ export const ProfileRightBottom = styled.div`
         margin-bottom: 4rem;
         max-width: unset;
         gap:0;
-
     }
+
 `
 export const Setting = styled.div`
     position:absolute;

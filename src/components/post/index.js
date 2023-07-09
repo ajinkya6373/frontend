@@ -40,7 +40,7 @@ import PostModal from '../postModal';
 import { cloudinaryBaseUrl } from '../../utils/utils';
 
 
-export default function Post({ post,islastPost }) {
+export default function Post({ post,islastpost }) {
     const {
         userProfile,
     } = useUserAuth();
@@ -101,7 +101,7 @@ export default function Post({ post,islastPost }) {
         addBookMark(postId)
     }
     return (
-        <PostContainer islastPost={islastPost}>
+        <PostContainer islastpost={islastpost}>
             <Wrapper>
                 <PostTop>
                     <PostTopLeft>

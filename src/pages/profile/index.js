@@ -82,7 +82,7 @@ export default function ProfilePage() {
     const reader = new FileReader();
     reader.readAsDataURL(file);
     reader.onloadend = () => {
-      coverState
+        coverState
         ? setCoverPreview(reader.result)
         : setprofilePreview(reader.result);
     };
@@ -99,7 +99,7 @@ export default function ProfilePage() {
       } = await axiosInstance.put(`/users/${userId}`, profileData);
       if (success) {
         toast.success(message)
-        setUserProfile((prv) => ({ ...prv, profilePicture: response.url }));
+        setUserProfile((prv) => ({ ...prv, profilePicture: response.profilePicture.url }));
       }
       setprofilePreview("");
     } catch (error) {

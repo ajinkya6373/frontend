@@ -1,41 +1,11 @@
-// Theme.js
 
-import React, { useState, createContext ,useContext} from 'react';
-
+import  { useState, createContext ,useContext} from 'react';
 import { GlobalStyle } from '../global-style';
-
-// themes.js
-
- const lightTheme = {
-    primaryBg: '#f5f5f5',
-    secondaryBg: '#ffffff',
-    primaryText: '#333333',
-    secondaryText: '#778189',
-    mainPrimary: '#ff3d64',
-    mainSecondary: '#c3385b',
-    iconPrimary: '#333333',
-    iconSecondary: '#ef3b60',
-    iconTertiary: '#19826a',
-  };
-  
-   const darkTheme = {
-    primaryBg: '#102b3f',
-    secondaryBg: '#001527',
-    primaryText: '#fcedf0',
-    secondaryText: '#778189',
-    mainPrimary: '#ff3d64',
-    mainSecondary: '#c3385b',
-    iconPrimary: '#fcedf0',
-    iconSecondary: '#ef3b60',
-    iconTertiary: '#19826a',
-  };
-  
-
-
+import { darkTheme, lightTheme } from '../utils/utils';
 export const ThemeContext = createContext();
 
 export const AppThemeProvider = ({ children }) => {
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   const toggleTheme = () => {
     setIsDarkMode((prevMode) => !prevMode);

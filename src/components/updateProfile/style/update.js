@@ -2,19 +2,43 @@ import styled from "styled-components/macro";
 
 export const UpdateContainer = styled.div`
     display:flex;
-    align-item:center;
     justify-content:center;
 `
 export const Container = styled.div`
     display:flex;
-    align-items:center;
     justify-content:center;
     flex-direction:column;
     min-width:300px;
 
 `
 export const Profile = styled.label`
-    display:inline-block;
+display: flex;
+flex-direction: column;
+align-items: center;
+    > div{
+          width: 100px;
+          height: 100px;
+          object-fit: contain;
+    }
+
+
+`
+
+export const InputBox = styled.span`
+display:flex;
+>span{
+    margin:0.5rem 0.5rem 0 0;
+    cursor:pointer;
+    >input{
+        display: none;
+        border:1px solid red;
+    }
+
+    &:hover{
+        text-decoration:underline;
+    }
+}
+
 `
 
 export const Form = styled.form`
@@ -25,11 +49,17 @@ export const FormItem = styled.div`
     flex-direction:column;
     margin-top:8px;
 `
-export const Label = styled.label``
+export const Label = styled.label`
+color: var(--secondary-text)
+`
 export const FormInput = styled.input`
     outline:none;
     border:none;
-    border-bottom:2px solid black;
+    border-bottom: 1px solid var(--primary-text);
+    background: none;
+    color: var(--primary-text);
+
+
 `
 export const Text = styled.h3`
     color:${props=> props.color || "#1877f2"}; 
@@ -57,7 +87,7 @@ export const Button = styled.button`
     margin-top:10px;
     margin-bottom: 10px;
     border: none;
-    background-color: #1872f2;
+    background-color: var(--main-secondary);
     color: white;
     border-radius: 5px;
     padding: 5px 10px;
@@ -66,4 +96,12 @@ export const Button = styled.button`
     font-size: 16px;
     font-weight: 500;
     cursor: pointer;
+`
+
+export const AvatarContainer = styled.div`
+>img{
+    width:40px;
+}
+
+
 `

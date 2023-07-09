@@ -49,32 +49,39 @@ export default function SignUpPage() {
     e.preventDefault();
     setSignUpError("");
     setLoading(true);
-
+  
     if (!isPasswordValid) {
       setSignUpError("Please enter a valid password!");
       setLoading(false);
       return;
     }
-
+  
     if (!isPasswordMatched) {
       setSignUpError("Both passwords must match!");
       setLoading(false);
       return;
     }
+  
     try {
       const {
         data: { success, message },
       } = await signUpUser(formData);
+  
       if (!success) {
-        setSignUpError(message);
+        if (message === "Username or email already exists.") {
+          setSignUpError(message);
+        } else {
+          console.log(message);
+          setSignUpError("Failed to create an account.");
+        }
       }
     } catch (error) {
-      setSignUpError(error);
+      setSignUpError("Failed to create an account.");
     } finally {
       setLoading(false);
     }
   };
-
+  
   const togglePasswordVisibility = () => {
     setShowPassword((prevShowPassword) => !prevShowPassword);
   };

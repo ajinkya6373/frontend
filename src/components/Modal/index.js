@@ -21,7 +21,7 @@ export default function ModalCustom({ children, profileModel, ...restProps }) {
 
     return (
         <Modal {...restProps}>
-            <Box sx={style} {...restProps}>
+            <Box sx={style} {...restProps} >
                 {children}
             </Box>
         </Modal>

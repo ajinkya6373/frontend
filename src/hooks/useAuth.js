@@ -26,10 +26,13 @@ export const useAuth = () => {
         const path = redirectPath || "/";
         navigate(path);
       } else {
+        toast.error(message);
         throw new Error(message);
       }
+      
     } catch (error) {
-      toast.error(error.message);
+      console.log(error);
+      toast.error(`${error.message}`);
       return { success: false, message: error.message };
     } finally {
       setLoading(false);

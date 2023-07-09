@@ -153,7 +153,7 @@ export default function HomePage() {
               <Post
                 key={post._id}
                 post={post}
-                islastPost={sortedPosts.length - 1 === index}
+                islastpost={sortedPosts.length - 1 === index}
               />
             ))
           ) : (
