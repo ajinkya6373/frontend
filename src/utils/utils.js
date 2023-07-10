@@ -10,7 +10,7 @@ export const guestLogInDetails = {
 
 export const cloudinaryBaseUrl = 'https://res.cloudinary.com/dt43t4ytm/image/upload/';
 
-export const avatarList = ["dogAvatar.png",'catAvatar.png','birdAvatar.png']
+export const avatarList = ["1.png",'2.png','3.png','4.png','5.png','6.png']
 
 
 export const lightTheme = {

@@ -101,6 +101,7 @@ export const Button = styled.button`
 export const AvatarContainer = styled.div`
 >img{
     width:40px;
+    cursor:pointer;
 }
 
 
