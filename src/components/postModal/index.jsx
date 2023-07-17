@@ -21,7 +21,7 @@ import { useEffect, useRef, useState } from "react";
 import { CommentBox, ModalCustom } from "../../components";
 import { useUserAuth } from "../../context";
 import { format } from "timeago.js";
-import InputEmoji, { async } from "react-input-emoji";
+import InputEmoji from "react-input-emoji";
 import { useUserAction } from "../../hooks";
 import CancelIcon from "@mui/icons-material/Cancel";
 const PostModal = ({ open, handleClose, post }) => {
