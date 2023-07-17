@@ -57,6 +57,9 @@ $ npm install
 
 ## Usage
 1. Start the development server:
+```
+$ npm start
+```
 2. Open your web browser and visit: `http://localhost:3000`
 
 Feel free to explore ShareSpace, create posts, like and comment on others' content, and engage with the community!
