@@ -10,6 +10,7 @@ ShareSpace is a social media app that allows users to share their moments, thoug
 - [Dependencies](#dependencies)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Backend] (#backend)
 
 ## Features
 ShareSpace comes with the following set of features:
@@ -52,3 +53,5 @@ Feel free to explore ShareSpace, create posts, like and comment on others' conte
 Thank you for choosing ShareSpace! If you encounter any issues or have suggestions for improvement, please feel free to contribute or reach out for support.
 
 Happy sharing and connecting on ShareSpace! 🌟
+
+## [backend] (https://github.com/ajinkya6373/shareSpaceBackend)
