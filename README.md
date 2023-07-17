@@ -6,7 +6,7 @@ ShareSpace is a social media app that allows users to share their moments, thoug
 
 ## Table of Contents
 - [Features](#features)
-- [Builds with](#Builds-with)
+- [Builds with](#builds-with)
 - [Getting Started](#getting-started)
 - [Dependencies](#dependencies)
 - [Installation](#installation)
@@ -32,7 +32,7 @@ ShareSpace comes with the following set of features:
 - React Router v6
 - Styled Components
 
-2.Backend:
+2. Backend:
 - Express Js
 - Mongodb 
 - cloudinary
