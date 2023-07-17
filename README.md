@@ -1,6 +1,6 @@
 # ShareSpace : Sharing Moments, Connecting Hearts
 
-![shareSpace Image](/assets/mockup.png "shareSpace App")
+![shareSpace Image](https://pbs.twimg.com/media/F0wXDpvaMAAKOqt?format=jpg&name=medium "shareSpace App")
 
 ShareSpace is a social media app that allows users to share their moments, thoughts, and creativity with others. With features similar to Instagram, users can express themselves, connect with like-minded individuals, and build meaningful relationships.
 
@@ -19,7 +19,6 @@ ShareSpace comes with the following set of features:
 - Like and Comment: Enable users to like and comment on posts to engage with each other's content.
 - Follow/Unfollow: Users can follow/unfollow other users to stay connected with their updates.
 - Explore: A dedicated page to discover new posts from other users beyond the ones they follow.
-- Notifications: Notify users about likes, comments, and new followers to keep them engaged with the app.
 - Edit Profile: Allow users to customize their profile information, including a profile picture and bio.
 - Dark Mode: Implement a dark mode option for better user experience in low-light environments.
 - Responsive Design: Ensure the app looks great on various devices, including desktops, tablets, and smartphones.
