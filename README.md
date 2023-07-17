@@ -28,8 +28,8 @@ ShareSpace comes with the following set of features:
 To get started with ShareSpace locally, follow the steps below:
 
 ## Dependencies
-- Node.js (Version X.X.X)
-- npm (Version X.X.X)
+- Node.js (v14.16.0)
+- npm (6.14.11)
 
 ## Installation
 1. Clone the repository:
