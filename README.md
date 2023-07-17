@@ -6,11 +6,12 @@ ShareSpace is a social media app that allows users to share their moments, thoug
 
 ## Table of Contents
 - [Features](#features)
+- [Builds with](#Builds-with)
 - [Getting Started](#getting-started)
 - [Dependencies](#dependencies)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Backend] (#backend)
+- [Backend Repository](#backend-repository) 
 
 ## Features
 ShareSpace comes with the following set of features:
@@ -23,6 +24,18 @@ ShareSpace comes with the following set of features:
 - Edit Profile: Allow users to customize their profile information, including a profile picture and bio.
 - Dark Mode: Implement a dark mode option for better user experience in low-light environments.
 - Responsive Design: Ensure the app looks great on various devices, including desktops, tablets, and smartphones.
+
+## Builds with 
+1. Frontend:
+- React JS
+- React Context API + useReducer
+- React Router v6
+- Styled Components
+
+2.Backend:
+- Express Js
+- Mongodb 
+- cloudinary
 
 ## Getting Started
 To get started with ShareSpace locally, follow the steps below:
@@ -46,12 +59,13 @@ $ npm install
 1. Start the development server:
 2. Open your web browser and visit: `http://localhost:3000`
 
-
 Feel free to explore ShareSpace, create posts, like and comment on others' content, and engage with the community!
 
+## Backend Repository
+Find the backend code for ShareSpace in the following repository:
+[ShareSpace Backend](https://github.com/ajinkya6373/shareSpaceBackend)
 
 Thank you for choosing ShareSpace! If you encounter any issues or have suggestions for improvement, please feel free to contribute or reach out for support.
 
 Happy sharing and connecting on ShareSpace! 🌟
 
-## [backend] (https://github.com/ajinkya6373/shareSpaceBackend)
