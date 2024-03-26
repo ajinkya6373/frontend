@@ -1,6 +1,6 @@
 import axios from "axios";
 export const axiosInstance = axios.create({
-    baseURL : "https://sharespacebackend.ajinkya6373.repl.co/api"
+    baseURL : "https://sharespacebackend-vqoa.onrender.com/api"
 })
 
 export const guestLogInDetails = {
